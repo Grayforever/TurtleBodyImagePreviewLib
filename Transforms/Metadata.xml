@@ -1,15 +1,14 @@
 ﻿<metadata>
-	<!--
-  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
-  path="/api/package[@name='com.greentoad.turtlebody.imagepreview']/class[@name='ImagePreviewImpl.OnImagePreviewListener']/method[@name='onDone']"
-  <attr path="/api/package[@name='com.greentoad.turtlebody.imagepreview']/class[@name='ImagePreview.PreviewFragment.OnPreviewFragmentListener']/method[@name='onDone'] and count(parameter)=1" name="managedName">onPreviewDone</attr>
-  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
-  -->
-
-	<attr path="/api/package[@name='com.greentoad.turtlebody.imagepreview']/class[@name='ImagePreview.PreviewFragment.Companion']" name="managedName">PreviewFragment</attr>
-	<remove-node path="/api/package[@name='com.greentoad.turtlebody.imagepreview.widget.inner']/class[@name='CheckedSavedState.CREATOR']"></remove-node>
 	<attr path="/api/package[@name='com.greentoad.turtlebody.imagepreview']/interface[@name='ImagePreview.ImagePreviewImpl.OnImagePreviewListener']/method[@name='onDone']" name="managedName">OnPreviewDone</attr>
 	<attr path="/api/package[@name='com.greentoad.turtlebody.imagepreview']/interface[@name='ImagePreview.PreviewFragment.OnPreviewFragmentListener']/method[@name='onDone']" name="managedName">OnDone</attr>
+	<remove-node path="/api/package[@name='com.greentoad.turtlebody.imagepreview.widget.inner']/class[@name='CheckedSavedState.CREATOR']"></remove-node>
+	<remove-node path="/api/package[@name='com.greentoad.turtlebody.imagepreview']/class[@name='ImagePreview.PreviewFragment.Companion']"></remove-node>
+	
+	
+
+	<add-node path="/api/package[@name='com.greentoad.turtlebody.imagepreview.ui.components']">
+		<class abstract="false" deprecated="not deprecated" name="ViewPagerAdapter" visibility="public" extends="java.lang.Object">
+		</class>
+	</add-node>
+
 </metadata>
